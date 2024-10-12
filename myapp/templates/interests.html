@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %}
+
+<div class="row my-2">
+    {% for interests in interests_show %}
+<div class="col-6">
+    <h4 class="text-light"> {{interests.title}}   </h4>
+    <img src="{% static interests.path %}" width="500" height="800" class="img-fluid">
+
+</div>
+{% endfor %}
+</div>
+
+{% endblock content1 %}
